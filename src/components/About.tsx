@@ -1,135 +1,142 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { Code2, Brain, Sparkles, Trophy } from "lucide-react";
+import { useRef, useEffect, useState } from "react";
 
-const stats = [
-  {
-    icon: Code2,
-    value: "3+",
-    label: "Production Projects",
-    color: "text-[var(--accent-emerald)]",
-    desc: "End-to-end solutions delivered",
-  },
-  {
-    icon: Brain,
-    value: "Angular",
-    label: "Primary Framework",
-    color: "text-[var(--accent-indigo)]",
-    desc: "Component-driven architecture",
-  },
-  {
-    icon: Sparkles,
-    value: "AI/ML",
-    label: "Core Specialization",
-    color: "text-[var(--accent-amber)]",
-    desc: "Deep learning & predictive models",
-  },
-  {
-    icon: Trophy,
-    value: "10.0",
-    label: "Perfect CGPA",
-    color: "text-[var(--accent-rose)]",
-    desc: "SSC Board of Education",
-  },
+const counters = [
+  { value: 3, suffix: "+", label: "Projects Delivered", color: "text-[var(--accent-cyan)]" },
+  { value: 1, suffix: "", label: "Internship Completed", color: "text-[var(--accent-blue)]" },
+  { value: 85, suffix: "%+", label: "AI Model Accuracy", color: "text-[var(--accent-teal)]" },
+  { value: 2026, suffix: "", label: "Graduate", color: "text-[var(--accent-cyan)]" },
 ];
+
+function AnimatedCounter({ value, suffix, label, color }: { value: number; suffix: string; label: string; color: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const counted = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !counted.current) {
+          counted.current = true;
+          const duration = 2000;
+          const steps = 30;
+          const increment = value / steps;
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= value) {
+              setCount(value);
+              clearInterval(timer);
+            } else {
+              setCount(Math.round(current));
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [value]);
+
+  return (
+    <div ref={ref} className="text-center p-7 glass rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:-translate-y-1">
+      <div className={`text-2xl md:text-3xl font-black tracking-tight ${color} mb-1`}>
+        {count}{suffix}
+      </div>
+      <div className="text-xs text-[var(--text-muted)] font-medium">{label}</div>
+    </div>
+  );
+}
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("revealed");
-        });
-      },
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("revealed"); }); },
       { threshold: 0.1 }
     );
-
-    const elements = sectionRef.current?.querySelectorAll(
-      ".reveal, .reveal-left, .reveal-right, .reveal-scale"
-    );
-    elements?.forEach((el) => observer.observe(el));
+    const els = sectionRef.current?.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    els?.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      className="relative py-28 md:py-36 overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--accent-indigo)] opacity-[0.02] blur-[120px] rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[var(--accent-emerald)] opacity-[0.015] blur-[100px] rounded-full" />
-
+    <section id="about" ref={sectionRef} className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
       <div className="section-container">
-        {/* Section header */}
-        <div className="flex items-center gap-3 mb-4 reveal">
-          <span className="w-12 h-px bg-gradient-to-r from-transparent via-[var(--accent-emerald)] to-[var(--accent-emerald)] opacity-50" />
-          <span className="font-mono text-[0.6rem] tracking-[0.25em] uppercase text-[var(--accent-emerald)] font-medium">
-            01 — About
-          </span>
+        <div className="reveal">
+          <span className="section-label">About Me</span>
         </div>
-
-        <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-[-0.02em] mb-14 md:mb-20 reveal">
-          Beyond the <span className="gradient-text">Code</span>
+        <h2 className="section-title reveal">
+          Who <span className="gradient-text">I Am</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-start">
-          {/* Bio */}
-          <div className="space-y-5 reveal-left">
-            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.85]">
-              I am <strong className="text-[var(--text-primary)]">Bandari Sanjay Kumar</strong>, a Computer Science & Engineering
-              graduate specializing in <strong className="text-[var(--accent-emerald)]">Artificial Intelligence & Machine Learning</strong>{" "}
-              at Vaageswari College of Engineering, Karimnagar. My work sits at the confluence of
-              production-grade full-stack development and applied AI research.
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
+          <div className="reveal-left space-y-4">
+            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
+              Computer Science (AI & ML) graduate who enjoys building products end-to-end — from Angular
+              frontends to Node.js APIs and MySQL databases. Delivered a live client website during
+              internship and developed AI models achieving <strong className="text-[var(--accent-cyan)]">85%+ prediction accuracy</strong>.
             </p>
-            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.85]">
-              Across the front-end, I architect modular Angular applications with TypeScript, Bootstrap 5,
-              and responsive, mobile-first design principles. On the back end, I design RESTful APIs with
-              Node.js, Express.js, and MySQL — delivering clean, maintainable systems built to scale.
+            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
+              Experienced in the full Software Development Life Cycle, RESTful API development, and
+              building AI-driven applications. Comfortable with <strong className="text-[var(--text-primary)]">Power BI</strong> and{" "}
+              <strong className="text-[var(--text-primary)]">Excel</strong> for data analysis when needed.
             </p>
-            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.85]">
-              During my internship at <strong className="text-[var(--text-primary)]">S2S Web Solutions</strong>, I owned the full SDLC
-              of a client-facing production application — from wireframe to live deployment. In parallel,
-              I engineered a deep learning model for road-accident severity prediction, achieving{" "}
-              <strong className="text-[var(--accent-amber)]">85%+ validation accuracy</strong> across 10,000+ records.
-            </p>
-            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.85]">
-              I write code that respects both the machine and the human who reads it. I collaborate
-              naturally within Agile teams, communicate technical decisions with clarity, and take
-              uncompromising ownership of every deliverable.
+            <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
+              Looking for a <strong className="text-[var(--accent-cyan)]">Fresher Software Developer</strong> or{" "}
+              <strong className="text-[var(--accent-cyan)]">Full Stack Developer</strong> role where I can contribute
+              meaningfully from day one.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-5 reveal-right">
-            {stats.map((stat) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={stat.label}
-                  className="group relative p-6 md:p-7 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl transition-all duration-400 hover:border-[var(--accent-emerald)] hover:-translate-y-1.5 hover:shadow-[0_0_40px_rgba(16,185,129,0.06)]"
-                >
-                  <Icon
-                    size={22}
-                    className={`${stat.color} mb-4 transition-transform duration-300 group-hover:scale-110`}
-                  />
-                  <div
-                    className={`text-2xl md:text-3xl font-black tracking-tight ${stat.color} mb-1`}
-                  >
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-[var(--text-muted)] font-semibold uppercase tracking-wider mb-0.5">
-                    {stat.label}
-                  </div>
-                  <div className="text-[0.65rem] text-[var(--text-muted)] opacity-60">
-                    {stat.desc}
-                  </div>
-                </div>
-              );
-            })}
+          {/* Info card */}
+          <div className="reveal-right">
+            <div className="glass rounded-xl p-8 md:p-10 space-y-5">
+              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
+                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Name</span>
+                <span className="text-sm text-[var(--text-primary)]">Bandari Sanjay Kumar</span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
+                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Location</span>
+                <span className="text-sm text-[var(--text-primary)]">Karimnagar, Telangana</span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
+                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Degree</span>
+                <span className="text-sm text-[var(--text-primary)]">B.Tech CSE (AI & ML)</span>
+              </div>
+              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
+                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Email</span>
+                <span className="text-sm text-[var(--accent-cyan)]">bandarisanjaykumar8@gmail.com</span>
+              </div>
+              <div className="flex justify-between py-2">
+                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Phone</span>
+                <span className="text-sm text-[var(--text-primary)]">+91 7993701618</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Animated counters */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+          {counters.map((c) => (
+            <AnimatedCounter key={c.label} value={c.value} suffix={c.suffix} label={c.label} color={c.color} />
+          ))}
+        </div>
+
+        {/* Soft Skills */}
+        <div className="mt-10 reveal">
+          <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4 text-center">
+            Soft Skills
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            {["Problem Solving", "Communication", "Team Collaboration", "Adaptability", "Time Management", "Continuous Learning"].map((skill) => (
+              <span key={skill} className="px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] transition-all duration-200">
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>

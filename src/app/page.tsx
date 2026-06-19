@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Achievements from "@/components/Achievements";
 import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
+import CodingProfiles from "@/components/CodingProfiles";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -20,49 +22,34 @@ export default function Home() {
       smoothWheel: true,
       wheelMultiplier: 1,
     });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
+    function raf(time: number) { lenis.raf(time); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
+    return () => { lenis.destroy(); };
   }, []);
 
   return (
     <>
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Projects />
+      <Achievements />
       <Education />
       <Certifications />
+      <CodingProfiles />
       <Contact />
 
-      {/* Footer */}
-      <footer className="py-10 border-t border-[var(--border-color)]">
-        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-5">
+      <footer className="py-8 border-t border-[var(--border-color)]">
+        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-bold tracking-tight">
-            <span className="text-[var(--accent-emerald)]">BSK</span>
-            <span className="text-[var(--text-muted)]">.</span>
+            <span className="text-[var(--accent-cyan)]">BSK</span><span className="text-[var(--text-muted)]">.</span>
           </div>
-          <p className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--text-muted)]">
-            Designed &amp; engineered with{" "}
-            <span className="text-[var(--accent-amber)]">precision</span> &nbsp;·&nbsp; 2026
+          <p className="font-mono text-[0.55rem] tracking-[0.15em] uppercase text-[var(--text-muted)]">
+            Designed &amp; developed with precision &nbsp;·&nbsp; 2026
           </p>
-          <a
-            href="#hero"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors duration-300"
-          >
+          <a href="#hero" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="font-mono text-[0.55rem] tracking-[0.15em] uppercase text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors">
             ↑ Back to top
           </a>
         </div>
