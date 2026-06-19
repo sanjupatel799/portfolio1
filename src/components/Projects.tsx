@@ -5,34 +5,34 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    type: "Production App",
-    typeColor: "text-[var(--accent-cyan)]",
+    type: "Production Application",
+    typeColor: "text-[var(--accent-emerald)]",
     name: "MSV Technologies Corporate Website",
     description:
-      "Designed and developed a dynamic responsive corporate website with 6+ pages (Home, Services, Contact, Blogs, Career, Development) using Angular and component-based architecture. Implemented performance optimization techniques including lazy loading and efficient routing.",
+      "Engineered a dynamic, responsive corporate web presence featuring six pages — Home, Services, Contact, Blogs, Career, and Development — built with Angular&apos;s component-based architecture. Implemented lazy loading, efficient routing, and mobile-first responsive design for a seamless experience across all devices and browsers.",
     tags: ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap 5"],
     link: "https://s2swebsolutions.in/msv",
-    accent: "from-[var(--accent-cyan)] to-[var(--accent-purple)]",
+    accent: "from-[var(--accent-emerald)] to-[var(--accent-indigo)]",
   },
   {
-    type: "Deep Learning — Mini Project",
-    typeColor: "text-[var(--accent-gold)]",
+    type: "Deep Learning — Applied Research",
+    typeColor: "text-[var(--accent-amber)]",
     name: "Road Accident Severity Prediction & Hospital Recommendation",
     description:
-      "Trained a deep learning multi-class classifier on 10,000+ records to predict accident severity (low/moderate/critical) achieving 85%+ validation accuracy via feature engineering and hyperparameter tuning. Built end-to-end preprocessing pipeline with geolocation-based hospital recommendation.",
+      "Developed a deep learning multi-class classifier trained on over 10,000 records to predict accident severity across three levels — low, moderate, and critical — achieving 85%+ validation accuracy through rigorous feature engineering and hyperparameter optimization. Built a complete preprocessing pipeline with an integrated geolocation-based hospital recommendation module.",
     tags: ["Python", "Deep Learning", "Scikit-learn", "Pandas", "NumPy"],
     link: "#",
-    accent: "from-[var(--accent-gold)] to-[var(--accent-rose)]",
+    accent: "from-[var(--accent-amber)] to-[var(--accent-rose)]",
   },
   {
-    type: "Major Research Project",
-    typeColor: "text-[var(--accent-purple)]",
+    type: "Major Research Initiative",
+    typeColor: "text-[var(--accent-indigo)]",
     name: "AI Literacy & Student Readiness Analysis",
     description:
-      "Surveyed 200+ engineering students to quantify AI literacy and identify 3 critical curriculum gaps; applied statistical correlation analysis and NLP-based text analysis. Delivered research report with evidence-based recommendations for AI education reform.",
+      "Conducted a survey of 200+ engineering students to quantify artificial intelligence literacy and identify three critical curriculum gaps. Applied statistical correlation analysis and NLP-based text analysis to extract meaningful patterns from qualitative data. Delivered an evidence-based research report with actionable recommendations for AI education reform.",
     tags: ["Python", "Statistical Analysis", "NLP", "Data Viz", "Survey Design"],
     link: "#",
-    accent: "from-[var(--accent-purple)] to-[var(--accent-cyan)]",
+    accent: "from-[var(--accent-indigo)] to-[var(--accent-emerald)]",
   },
 ];
 
@@ -43,9 +43,7 @@ export default function Projects() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("revealed");
         });
       },
       { threshold: 0.1 }
@@ -55,7 +53,6 @@ export default function Projects() {
       ".reveal, .reveal-left, .reveal-right, .stagger-children"
     );
     elements?.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
@@ -63,44 +60,45 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-24 md:py-32 bg-[var(--bg-secondary)] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[var(--bg-secondary)] overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--accent-rose)] opacity-[0.02] blur-[100px] rounded-full" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--accent-amber)] opacity-[0.015] blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[var(--accent-emerald)] opacity-[0.015] blur-[100px] rounded-full" />
 
       <div className="section-container">
         {/* Section header */}
         <div className="flex items-center gap-3 mb-4 reveal">
-          <span className="font-mono text-[0.65rem] tracking-[0.2em] uppercase text-[var(--accent-cyan)]">
+          <span className="w-12 h-px bg-gradient-to-r from-transparent via-[var(--accent-emerald)] to-[var(--accent-emerald)] opacity-50" />
+          <span className="font-mono text-[0.6rem] tracking-[0.25em] uppercase text-[var(--accent-emerald)] font-medium">
             04 — Projects
           </span>
-          <span className="w-8 h-px bg-[var(--accent-cyan)] opacity-30" />
         </div>
 
-        <h2 className="text-[clamp(1.5rem,3.5vw,2.8rem)] font-black tracking-[-0.02em] mb-12 md:mb-16 reveal">
-          What I&apos;ve <span className="gradient-text">Built</span>
+        <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-[-0.02em] mb-14 md:mb-20 reveal">
+          What I&apos;ve <span className="gradient-text">Delivered</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <div
               key={project.name}
-              className="group relative bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+              className="group relative bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.35)]"
               style={{
                 opacity: 0,
                 transform: "translateY(30px)",
-                animation: `cardFadeIn 0.6s ease ${i * 0.12}s forwards`,
+                animation: `cardFadeIn 0.7s ease ${i * 0.12}s forwards`,
               }}
             >
               {/* Top gradient bar */}
               <div
-                className={`h-1 bg-gradient-to-r ${project.accent}`}
+                className={`h-1.5 bg-gradient-to-r ${project.accent}`}
               />
 
-              <div className="p-6 md:p-7">
+              <div className="p-7 md:p-8">
                 {/* Type badge */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-5">
                   <span
-                    className={`font-mono text-[0.6rem] tracking-[0.15em] uppercase ${project.typeColor}`}
+                    className={`font-mono text-[0.55rem] tracking-[0.2em] uppercase ${project.typeColor} font-medium`}
                   >
                     {project.type}
                   </span>
@@ -109,7 +107,7 @@ export default function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors"
+                      className="text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors duration-300 hover:-translate-y-0.5 inline-block"
                     >
                       <ExternalLink size={14} />
                     </a>
@@ -117,12 +115,12 @@ export default function Projects() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold mb-3 leading-snug group-hover:text-[var(--accent-cyan)] transition-colors duration-300">
+                <h3 className="text-lg font-bold mb-3 leading-snug transition-colors duration-300 group-hover:text-[var(--accent-emerald)]">
                   {project.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-5 line-clamp-4">
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 line-clamp-4">
                   {project.description}
                 </p>
 
@@ -131,7 +129,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 bg-[rgba(0,229,255,0.05)] border border-[rgba(0,229,255,0.1)] text-[0.65rem] font-mono text-[var(--text-muted)] rounded"
+                      className="px-2.5 py-1 bg-[rgba(16,185,129,0.05)] border border-[rgba(16,185,129,0.1)] text-[0.6rem] font-mono text-[var(--text-muted)] rounded-md"
                     >
                       {tag}
                     </span>
@@ -140,11 +138,10 @@ export default function Projects() {
               </div>
 
               {/* Hover glow */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-t from-[rgba(0,229,255,0.03)] to-transparent" />
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-t from-[rgba(16,185,129,0.03)] to-transparent" />
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

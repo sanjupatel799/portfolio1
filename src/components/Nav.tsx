@@ -17,20 +17,24 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const navRef = useRef<HTMLElement>(null);
+  const sectionsRef = useRef<HTMLElement[]>([]);
+
+  useEffect(() => {
+    sectionsRef.current = NAV_ITEMS.map((item) =>
+      document.querySelector(item.href)
+    ).filter(Boolean) as HTMLElement[];
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Detect active section
-      const sections = NAV_ITEMS.map((item) =>
-        document.querySelector(item.href)
-      ).filter(Boolean) as HTMLElement[];
+      const sections = sectionsRef.current;
+      if (!sections.length) return;
 
       const scrollPos = window.scrollY + 150;
       for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section.offsetTop <= scrollPos) {
+        if (sections[i].offsetTop <= scrollPos) {
           setActiveSection(NAV_ITEMS[i].href);
           break;
         }
@@ -54,7 +58,7 @@ export default function Nav() {
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[rgba(8,8,14,0.85)] backdrop-blur-xl border-b border-[var(--border-color)] shadow-lg shadow-black/10"
+          ? "bg-[rgba(7,7,13,0.88)] backdrop-blur-2xl border-b border-[var(--border-color)] shadow-lg shadow-black/10"
           : "bg-transparent"
       }`}
     >
@@ -68,7 +72,7 @@ export default function Nav() {
           }}
           className="font-bold text-lg md:text-xl tracking-tight"
         >
-          <span className="text-[var(--accent-cyan)]">BSK</span>
+          <span className="text-[var(--accent-emerald)]">BSK</span>
           <span className="text-[var(--text-muted)]">.</span>
         </a>
 
@@ -80,7 +84,7 @@ export default function Nav() {
                 onClick={() => handleClick(item.href)}
                 className={`font-mono text-xs tracking-[0.12em] uppercase transition-colors duration-300 ${
                   activeSection === item.href
-                    ? "text-[var(--accent-cyan)]"
+                    ? "text-[var(--accent-emerald)]"
                     : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                 }`}
               >
@@ -120,7 +124,7 @@ export default function Nav() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-[rgba(8,8,14,0.98)] backdrop-blur-xl border-b border-[var(--border-color)] px-4 py-4">
+        <div className="bg-[rgba(7,7,13,0.98)] backdrop-blur-2xl border-b border-[var(--border-color)] px-4 py-4">
           <ul className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
@@ -128,7 +132,7 @@ export default function Nav() {
                   onClick={() => handleClick(item.href)}
                   className={`font-mono text-sm tracking-[0.12em] uppercase transition-colors w-full text-left py-2 ${
                     activeSection === item.href
-                      ? "text-[var(--accent-cyan)]"
+                      ? "text-[var(--accent-emerald)]"
                       : "text-[var(--text-muted)]"
                   }`}
                 >

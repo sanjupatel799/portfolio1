@@ -50,12 +50,12 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className="fixed pointer-events-none z-[9999] w-3 h-3 rounded-full bg-[var(--accent-cyan)] mix-blend-screen transition-transform duration-150 ease-out hidden md:block"
+        className="fixed pointer-events-none z-[9999] w-3 h-3 rounded-full bg-[var(--accent-emerald)] mix-blend-screen transition-transform duration-150 ease-out hidden md:block"
         style={{ left: 0, top: 0 }}
       />
       <div
         ref={ringRef}
-        className="fixed pointer-events-none z-[9998] w-9 h-9 rounded-full border border-[var(--accent-cyan)] opacity-40 hidden md:block"
+        className="fixed pointer-events-none z-[9998] w-9 h-9 rounded-full border border-[var(--accent-emerald)] opacity-40 hidden md:block"
         style={{ left: 0, top: 0 }}
       />
     </>

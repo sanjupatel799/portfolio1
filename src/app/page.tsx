@@ -14,7 +14,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.3,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       smoothWheel: true,
@@ -45,15 +45,15 @@ export default function Home() {
       <Contact />
 
       {/* Footer */}
-      <footer className="py-8 border-t border-[var(--border-color)]">
-        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="py-10 border-t border-[var(--border-color)]">
+        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-5">
           <div className="font-bold tracking-tight">
-            <span className="text-[var(--accent-cyan)]">BSK</span>
+            <span className="text-[var(--accent-emerald)]">BSK</span>
             <span className="text-[var(--text-muted)]">.</span>
           </div>
-          <p className="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-[var(--text-muted)]">
-            Designed &amp; built with{" "}
-            <span className="text-[var(--accent-rose)]">passion</span> &nbsp;·&nbsp; 2026
+          <p className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--text-muted)]">
+            Designed &amp; engineered with{" "}
+            <span className="text-[var(--accent-amber)]">precision</span> &nbsp;·&nbsp; 2026
           </p>
           <a
             href="#hero"
@@ -61,7 +61,7 @@ export default function Home() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="font-mono text-[0.65rem] tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors"
+            className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--text-muted)] hover:text-[var(--accent-emerald)] transition-colors duration-300"
           >
             ↑ Back to top
           </a>
