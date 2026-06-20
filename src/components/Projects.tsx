@@ -59,21 +59,21 @@ export default function Projects() {
               {/* Gradient top bar */}
               <div className={`h-1 bg-gradient-to-r ${project.accent}`} />
 
-              <div className="p-8">
+              <div className="p-8 text-center">
                 <span className="font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-cyan)] font-medium mb-3 block">
                   {project.type}
                 </span>
 
-                <h3 className="text-base font-bold mb-2 leading-snug group-hover:text-[var(--accent-cyan)] transition-colors">
+                <h3 className="text-base font-bold mb-3 leading-snug group-hover:text-[var(--accent-cyan)] transition-colors">
                   {project.name}
                 </h3>
 
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 text-left">
                   {project.description}
                 </p>
 
                 {/* Metrics */}
-                <div className="flex gap-2 mb-4">
+                <div className="flex flex-wrap justify-center gap-2 mb-4">
                   {project.metrics.map((m) => (
                     <span key={m} className="px-2 py-1 bg-[rgba(6,182,212,0.06)] border border-[rgba(6,182,212,0.1)] text-[0.55rem] font-mono text-[var(--accent-cyan)] rounded">
                       {m}
@@ -82,7 +82,7 @@ export default function Projects() {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap justify-center gap-2 mb-5">
                   {project.tags.map((tag) => (
                     <span key={tag} className="px-2 py-1 bg-[rgba(255,255,255,0.03)] border border-[var(--border-color)] text-[0.55rem] font-mono text-[var(--text-muted)] rounded">
                       {tag}
@@ -91,7 +91,7 @@ export default function Projects() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3">
+                <div className="flex flex-wrap justify-center gap-3">
                   {project.demo !== "#" && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-[0.6rem] font-medium rounded-lg transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]">

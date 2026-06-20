@@ -40,7 +40,7 @@ export default function Education() {
           {education.map((edu, i) => (
             <div
               key={edu.year}
-              className="glass rounded-xl p-8 md:p-9 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+              className="glass rounded-xl p-8 md:p-9 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1 text-center"
               style={{ animation: `fadeInUp 0.5s ease ${i * 0.12}s forwards`, opacity: 0 }}
             >
               <span className="font-mono text-[0.55rem] tracking-[0.1em] text-[var(--accent-cyan)] mb-2 block font-medium">
@@ -52,7 +52,7 @@ export default function Education() {
               <p className="text-sm text-[var(--text-secondary)] mb-4">
                 {edu.school}
               </p>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-center gap-3">
                 <span className={`font-mono text-xs ${edu.highlight ? "text-[var(--accent-cyan)] font-bold" : "text-[var(--text-muted)]"}`}>
                   {edu.score}
                 </span>

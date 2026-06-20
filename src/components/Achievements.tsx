@@ -45,11 +45,10 @@ export default function Achievements() {
             const Icon = item.icon;
             return (
               <div
-                key={item.title}
-                className="glass rounded-xl p-8 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
-                style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
-              >
-                <div className="flex items-start gap-5">
+                key={item.title}              className="glass rounded-xl p-8 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+              style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
+            >
+                <div className="flex flex-col items-center text-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
                     <Icon size={18} className={item.color} />
                   </div>

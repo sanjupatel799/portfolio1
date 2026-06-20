@@ -64,7 +64,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="about" ref={sectionRef} className="relative py-44 md:py-52 bg-[var(--bg-secondary)] overflow-hidden">
       <div className="section-container">
         <div className="reveal">
           <span className="section-label">About Me</span>
@@ -73,7 +73,7 @@ export default function About() {
           Who <span className="gradient-text">I Am</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           <div className="reveal-left space-y-4">
             <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
               Computer Science (AI & ML) graduate who enjoys building products end-to-end — from Angular
@@ -94,40 +94,40 @@ export default function About() {
 
           {/* Info card */}
           <div className="reveal-right">
-            <div className="glass rounded-xl p-8 md:p-10 space-y-5">
-              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
-                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Name</span>
-                <span className="text-sm text-[var(--text-primary)]">Bandari Sanjay Kumar</span>
+            <div className="glass rounded-xl p-7 md:p-8 space-y-5 text-center">
+              <div className="py-3 border-b border-[var(--border-color)]">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Name</div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">Bandari Sanjay Kumar</div>
               </div>
-              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
-                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Location</span>
-                <span className="text-sm text-[var(--text-primary)]">Karimnagar, Telangana</span>
+              <div className="py-3 border-b border-[var(--border-color)]">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Location</div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">Karimnagar, Telangana</div>
               </div>
-              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
-                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Degree</span>
-                <span className="text-sm text-[var(--text-primary)]">B.Tech CSE (AI & ML)</span>
+              <div className="py-3 border-b border-[var(--border-color)]">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Degree</div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">B.Tech CSE (AI & ML)</div>
               </div>
-              <div className="flex justify-between py-2 border-b border-[var(--border-color)]">
-                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Email</span>
-                <span className="text-sm text-[var(--accent-cyan)]">bandarisanjaykumar8@gmail.com</span>
+              <div className="py-3 border-b border-[var(--border-color)]">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Email</div>
+                <div className="text-sm font-medium text-[var(--accent-cyan)] break-all">bandarisanjaykumar8@gmail.com</div>
               </div>
-              <div className="flex justify-between py-2">
-                <span className="text-xs text-[var(--text-muted)] font-medium uppercase tracking-wider">Phone</span>
-                <span className="text-sm text-[var(--text-primary)]">+91 7993701618</span>
+              <div className="py-3">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Phone</div>
+                <div className="text-sm font-medium text-[var(--text-primary)]">+91 7993701618</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Animated counters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
           {counters.map((c) => (
             <AnimatedCounter key={c.label} value={c.value} suffix={c.suffix} label={c.label} color={c.color} />
           ))}
         </div>
 
         {/* Soft Skills */}
-        <div className="mt-10 reveal">
+        <div className="mt-16 reveal">
           <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--text-muted)] mb-4 text-center">
             Soft Skills
           </h3>

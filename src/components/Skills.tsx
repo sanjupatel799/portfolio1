@@ -58,7 +58,7 @@ const techTags = [
 
 function SkillBar({ name, level, index }: { name: string; level: number; index: number }) {
   return (
-    <div className="mb-3.5" style={{ animation: `fadeInUp 0.5s ease ${index * 0.08 + 0.2}s forwards`, opacity: 0 }}>
+    <div className="mb-5" style={{ animation: `fadeInUp 0.5s ease ${index * 0.08 + 0.2}s forwards`, opacity: 0 }}>
       <div className="flex justify-between mb-1">
         <span className="text-sm font-medium text-[var(--text-primary)]">{name}</span>
         <span className="text-xs text-[var(--text-muted)] font-mono">{level}%</span>
@@ -75,7 +75,7 @@ function SkillBar({ name, level, index }: { name: string; level: number; index: 
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-36 md:py-44 overflow-hidden">
+    <section id="skills" className="relative py-44 md:py-52 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--accent-cyan)] opacity-[0.015] blur-[140px] rounded-full" />
 
       <div className="section-container">
@@ -90,10 +90,10 @@ export default function Skills() {
           {skillCategories.map((cat, i) => (
             <div
               key={cat.title}
-              className="glass rounded-xl p-8 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+              className="glass rounded-xl p-10 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
               style={{ animation: `fadeInUp 0.5s ease ${i * 0.08}s forwards`, opacity: 0 }}
             >
-              <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--accent-cyan)] font-medium mb-4 pb-3 border-b border-[var(--border-color)]">
+              <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--accent-cyan)] font-medium mb-5 pb-4 border-b border-[var(--border-color)] text-center">
                 // {cat.title}
               </h3>
               {cat.skills.map((skill, j) => (

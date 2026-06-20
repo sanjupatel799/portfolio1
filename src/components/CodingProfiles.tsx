@@ -40,21 +40,21 @@ export default function CodingProfiles() {
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group glass rounded-xl p-8 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+                className="group glass rounded-xl p-8 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1 text-center"
                 style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[rgba(6,182,212,0.1)] flex items-center justify-center">
                     <Icon size={24} />
                   </div>
-                  <div className="flex-1">
+                  <div>
                     <h3 className="text-base font-bold group-hover:text-[var(--accent-cyan)] transition-colors">
                       {profile.name}
                     </h3>
                     <p className="text-xs text-[var(--text-muted)] mt-0.5">{profile.username}</p>
                     <p className="text-[0.65rem] text-[var(--text-secondary)] mt-1">{profile.stats}</p>
                   </div>
-                  <ExternalLink size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent-cyan)] transition-colors flex-shrink-0" />
+                  <ExternalLink size={14} className="text-[var(--text-muted)] group-hover:text-[var(--accent-cyan)] transition-colors" />
                 </div>
               </a>
             );

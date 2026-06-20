@@ -109,12 +109,15 @@ html.lenis { height: auto; }
 
 /* ── Section utilities ── */
 .section-container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 15px;
 }
-@media (min-width: 768px) {
-  .section-container { padding: 0 2rem; }
+@media (min-width: 640px) {
+  .section-container { padding: 0 20px; }
+}
+@media (min-width: 1024px) {
+  .section-container { padding: 0 40px; }
 }
 
 .section-label {
@@ -127,6 +130,7 @@ html.lenis { height: auto; }
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
 .section-label::after {
@@ -144,6 +148,7 @@ html.lenis { height: auto; }
   letter-spacing: -0.02em;
   margin-bottom: 3rem;
   line-height: 1.15;
+  text-align: center;
 }
 
 /* ── Glow effects ── */
