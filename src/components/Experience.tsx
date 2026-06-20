@@ -6,34 +6,36 @@ export default function Experience() {
   return (
     <section id="experience" className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
       <div className="section-container">
-        <div>
-          <span className="section-label">Experience</span>
-        </div>
-        <h2 className="section-title">
-          Internship <span className="gradient-text">Journey</span>
-        </h2>
+        <div className="flex flex-col items-center">
+          {/* Header */}
+          <div className="text-center mb-14">
+            <div className="flex justify-center">
+              <span className="section-label">Experience</span>
+            </div>
+            <h2 className="section-title">
+              Internship <span className="gradient-text">Journey</span>
+            </h2>
+          </div>
 
-        <div className="relative pl-8 md:pl-0 max-w-3xl mx-auto">
-          {/* Timeline line */}
-          <div className="absolute left-3 md:left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent-cyan)] via-[var(--accent-blue)] to-transparent" />
-
-          <div className="relative pl-6 md:pl-10" style={{ animation: "fadeInUp 0.6s ease forwards" }}>
-            {/* Dot */}
-            <div className="absolute left-[-1.1rem] md:left-[0.15rem] top-2 w-3 h-3 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_12px_rgba(6,182,212,0.5)] ring-[3px] ring-[var(--bg-secondary)]" />
-
-            <div className="glass rounded-xl p-9 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-0.5 text-center">
-              <div className="mb-3">
-                <h3 className="text-lg font-bold mb-1.5">Full Stack Developer Intern</h3>
+          {/* Centered card */}
+          <div className="w-full max-w-2xl">
+            <div
+              className="glass rounded-xl p-12 flex flex-col items-center gap-6 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-0.5 text-center"
+              style={{ animation: "fadeInUp 0.6s ease forwards" }}
+            >
+              {/* Header */}
+              <div className="flex flex-col items-center gap-2">
+                <h3 className="text-lg font-bold">Full Stack Developer Intern</h3>
                 <span className="inline-block font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-cyan)] font-medium px-3 py-1 glass rounded-full">
                   S2S Web Solutions
                 </span>
               </div>
 
-              <p className="font-mono text-[0.65rem] text-[var(--text-muted)] mb-6">
+              <p className="font-mono text-[0.65rem] text-[var(--text-muted)]">
                 Karimnagar · Aug 2025 – May 2026
               </p>
 
-              <ul className="space-y-4 mb-8 max-w-xl mx-auto text-left">
+              <ul className="w-full space-y-4 text-left">
                 {["Built the MSV Technologies website from scratch using Angular and TypeScript.",
                   "Developed backend APIs using Node.js and Express.js.",
                   "Worked with Git branching workflows and GitHub collaboration.",

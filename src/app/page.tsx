@@ -31,13 +31,19 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <div className="h-12 md:h-20" />
       <Skills />
+      <div className="h-12 md:h-20" />
       <Experience />
+      <div className="h-12 md:h-20" />
       <Projects />
+      <div className="h-12 md:h-20" />
       <Achievements />
+      <div className="h-12 md:h-20" />
       <Education />
       <Certifications />
       <CodingProfiles />
+      <div className="h-12 md:h-20" />
       <Contact />
 
       <footer className="py-8 border-t border-[var(--border-color)]">

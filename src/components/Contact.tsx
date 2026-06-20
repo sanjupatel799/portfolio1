@@ -7,96 +7,115 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
       <div className="section-container">
-        <div className="flex flex-col items-center text-center">
-          <span className="section-label" style={{ justifyContent: "center" }}>Contact</span>
-        </div>
-        <h2 className="section-title text-center">
-          Let&apos;s <span className="gradient-text">Connect</span>
-        </h2>
-        <p className="text-center text-[var(--text-muted)] text-sm md:text-base max-w-lg mx-auto mb-12 leading-relaxed">
-          I&apos;m always open to discussing new projects, creative ideas, or opportunities
-          to be part of your vision. Feel free to reach out through any channel below.
-        </p>
-
-        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-6">
-          {/* Contact Info Card */}
-          <div className="glass rounded-2xl p-8 space-y-4">
-            <h3 className="text-sm font-bold mb-2">Contact Information</h3>
-
-            <a href="mailto:bandarisanjaykumar8@gmail.com"
-              className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-cyan)] group">
-              <div className="w-9 h-9 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center">
-                <Mail size={15} className="text-[var(--accent-cyan)]" />
-              </div>
-              <div className="text-left flex-1 min-w-0">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Email</div>
-                <div className="text-xs font-medium truncate">bandarisanjaykumar8@gmail.com</div>
-              </div>
-            </a>
-
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
-              <div className="w-9 h-9 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center">
-                <Phone size={15} className="text-[var(--accent-cyan)]" />
-              </div>
-              <div>
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Phone</div>
-                <div className="text-xs font-medium">+91 7993701618</div>
-              </div>
+        <div className="flex flex-col items-center">
+          {/* Header */}
+          <div className="text-center mb-14 max-w-2xl">
+            <div className="flex justify-center">
+              <span className="section-label">Contact</span>
             </div>
-
-            <div className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
-              <div className="w-9 h-9 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center">
-                <MapPin size={15} className="text-[var(--accent-cyan)]" />
-              </div>
-              <div>
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Location</div>
-                <div className="text-xs font-medium">Karimnagar, Telangana, India</div>
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2 pt-2">
-              <a href="mailto:bandarisanjaykumar8@gmail.com"
-                className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-                <Send size={14} /> Email Me
-              </a>
-              <a href="https://wa.me/917993701618" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
-                <MessageCircle size={14} /> WhatsApp
-              </a>
-              <a href="/resume.pdf" download
-                className="flex items-center gap-1.5 px-4 py-2 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
-                <Download size={14} /> Resume
-              </a>
-            </div>
+            <h2 className="section-title">
+              Let&apos;s <span className="gradient-text">Connect</span>
+            </h2>
+            <p className="text-[var(--text-muted)] text-sm md:text-base leading-relaxed">
+              I&apos;m always open to discussing new projects, creative ideas, or opportunities
+              to be part of your vision. Feel free to reach out through any channel below.
+            </p>
           </div>
 
-          {/* Social & Quick Links */}
-          <div className="glass rounded-2xl p-8">
-            <h3 className="text-sm font-bold mb-4">Quick Links</h3>
-            <div className="space-y-3">
-              <a href="https://github.com/sanjupatel799" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-cyan)] group">
-                <GithubIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-cyan)]" />
-                <span className="text-sm group-hover:text-[var(--accent-cyan)] transition-colors">github.com/sanjupatel799</span>
-              </a>
-              <a href="https://linkedin.com/in/sanjaykumarbandari799" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-blue)] group">
-                <LinkedinIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-blue)]" />
-                <span className="text-sm group-hover:text-[var(--accent-blue)] transition-colors">linkedin.com/in/sanjaykumarbandari799</span>
-              </a>
-            </div>
+          {/* Centered cards grid */}
+          <div className="w-full max-w-4xl">
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Contact Info Card */}
+              <div className="glass rounded-2xl p-12 flex flex-col items-center gap-5">
+                <h3 className="text-sm font-bold">Contact Information</h3>
 
-            {/* Decorative gradient */}
-            <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-[rgba(6,182,212,0.05)] to-[rgba(59,130,246,0.05)] border border-[rgba(6,182,212,0.08)]">
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                <strong className="text-[var(--accent-cyan)]">BANDARI SANJAY KUMAR</strong>
-                <br />
-                Full Stack Developer · Angular · Node.js · AI & ML
-              </p>
-              <p className="text-[0.55rem] text-[var(--text-muted)] mt-2 font-mono">
-                Available for opportunities
-              </p>
+                <a href="mailto:bandarisanjaykumar8@gmail.com"
+                  className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-cyan)] group">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                    <Mail size={16} className="text-[var(--accent-cyan)]" />
+                  </div>
+                  <div className="text-left flex-1 min-w-0">
+                    <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Email</div>
+                    <div className="text-xs font-medium truncate">bandarisanjaykumar8@gmail.com</div>
+                  </div>
+                </a>
+
+                <div className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                    <Phone size={16} className="text-[var(--accent-cyan)]" />
+                  </div>
+                  <div>
+                    <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Phone</div>
+                    <div className="text-xs font-medium">+91 7993701618</div>
+                  </div>
+                </div>
+
+                <div className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                    <MapPin size={16} className="text-[var(--accent-cyan)]" />
+                  </div>
+                  <div>
+                    <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Location</div>
+                    <div className="text-xs font-medium">Karimnagar, Telangana, India</div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="w-full flex flex-wrap justify-center gap-3">
+                  <a href="mailto:bandarisanjaykumar8@gmail.com"
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                    <Send size={14} /> Email Me
+                  </a>
+                  <a href="https://wa.me/917993701618" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
+                    <MessageCircle size={14} /> WhatsApp
+                  </a>
+                  <a href="/resume.pdf" download
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
+                    <Download size={14} /> Resume
+                  </a>
+                </div>
+              </div>
+
+              {/* Social & Quick Links Card */}
+              <div className="glass rounded-2xl p-12 flex flex-col items-center gap-5">
+                <h3 className="text-sm font-bold">Quick Links</h3>
+
+                <div className="w-full flex flex-col gap-4">
+                  <a href="https://github.com/sanjupatel799" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-cyan)] group">
+                    <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                      <GithubIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-cyan)] transition-colors" />
+                    </div>
+                    <div className="text-left flex-1 min-w-0">
+                      <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">GitHub</div>
+                      <div className="text-xs font-medium group-hover:text-[var(--accent-cyan)] transition-colors">sanjupatel799</div>
+                    </div>
+                  </a>
+                  <a href="https://linkedin.com/in/sanjaykumarbandari799" target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-blue)] group">
+                    <div className="w-10 h-10 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                      <LinkedinIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-blue)] transition-colors" />
+                    </div>
+                    <div className="text-left flex-1 min-w-0">
+                      <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">LinkedIn</div>
+                      <div className="text-xs font-medium group-hover:text-[var(--accent-blue)] transition-colors">sanjaykumarbandari799</div>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Decorative gradient */}
+                <div className="w-full p-5 rounded-xl bg-gradient-to-br from-[rgba(6,182,212,0.05)] to-[rgba(59,130,246,0.05)] border border-[rgba(6,182,212,0.08)] text-center">
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                    <strong className="text-[var(--accent-cyan)]">BANDARI SANJAY KUMAR</strong>
+                    <br />
+                    Full Stack Developer · Angular · Node.js · AI & ML
+                  </p>
+                  <p className="text-[0.55rem] text-[var(--text-muted)] mt-2 font-mono">
+                    Available for opportunities
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

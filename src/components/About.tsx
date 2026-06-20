@@ -41,8 +41,8 @@ function AnimatedCounter({ value, suffix, label, color }: { value: number; suffi
   }, [value]);
 
   return (
-    <div ref={ref} className="text-center p-7 glass rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:-translate-y-1">
-      <div className={`text-2xl md:text-3xl font-black tracking-tight ${color} mb-1`}>
+    <div ref={ref} className="text-center p-10 flex flex-col gap-3 glass rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:-translate-y-1">
+      <div className={`text-2xl md:text-3xl font-black tracking-tight ${color}`}>
         {count}{suffix}
       </div>
       <div className="text-xs text-[var(--text-muted)] font-medium">{label}</div>
@@ -94,25 +94,25 @@ export default function About() {
 
           {/* Info card */}
           <div className="reveal-right">
-            <div className="glass rounded-xl p-7 md:p-8 space-y-5 text-center">
-              <div className="py-3 border-b border-[var(--border-color)]">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Name</div>
+            <div className="glass rounded-xl p-12 flex flex-col gap-4 text-center">
+              <div className="border-b border-[var(--border-color)] pb-4">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Name</div>
                 <div className="text-sm font-medium text-[var(--text-primary)]">Bandari Sanjay Kumar</div>
               </div>
-              <div className="py-3 border-b border-[var(--border-color)]">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Location</div>
+              <div className="border-b border-[var(--border-color)] pb-4">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Location</div>
                 <div className="text-sm font-medium text-[var(--text-primary)]">Karimnagar, Telangana</div>
               </div>
-              <div className="py-3 border-b border-[var(--border-color)]">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Degree</div>
+              <div className="border-b border-[var(--border-color)] pb-4">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Degree</div>
                 <div className="text-sm font-medium text-[var(--text-primary)]">B.Tech CSE (AI & ML)</div>
               </div>
-              <div className="py-3 border-b border-[var(--border-color)]">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Email</div>
+              <div className="border-b border-[var(--border-color)] pb-4">
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Email</div>
                 <div className="text-sm font-medium text-[var(--accent-cyan)] break-all">bandarisanjaykumar8@gmail.com</div>
               </div>
-              <div className="py-3">
-                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase mb-1">Phone</div>
+              <div>
+                <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Phone</div>
                 <div className="text-sm font-medium text-[var(--text-primary)]">+91 7993701618</div>
               </div>
             </div>
