@@ -55,7 +55,7 @@ export default function Nav() {
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <a href="#hero" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           className="font-bold text-lg md:text-xl tracking-tight">
-          <span className="text-[var(--accent-cyan)]">BSK</span><span className="text-[var(--text-muted)]">.</span>
+          <span className="text-[var(--accent-orange)]">BSK</span><span className="text-[var(--text-muted)]">.</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -63,7 +63,7 @@ export default function Nav() {
             <li key={item.href}>
               <button onClick={() => handleClick(item.href)}
                 className={`font-mono text-xs tracking-[0.12em] uppercase transition-colors duration-300 ${
-                  activeSection === item.href ? "text-[var(--accent-cyan)]" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                  activeSection === item.href ? "text-[var(--accent-orange)]" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                 }`}>
                 {item.label}
               </button>
@@ -85,7 +85,7 @@ export default function Nav() {
               <li key={item.href}>
                 <button onClick={() => handleClick(item.href)}
                   className={`font-mono text-sm tracking-[0.12em] uppercase transition-colors w-full text-left py-2 ${
-                    activeSection === item.href ? "text-[var(--accent-cyan)]" : "text-[var(--text-muted)]"
+                    activeSection === item.href ? "text-[var(--accent-orange)]" : "text-[var(--text-muted)]"
                   }`}>
                   {item.label}
                 </button>

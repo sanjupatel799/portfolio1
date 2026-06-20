@@ -3,10 +3,10 @@
 import { useRef, useEffect, useState } from "react";
 
 const counters = [
-  { value: 3, suffix: "+", label: "Projects Delivered", color: "text-[var(--accent-cyan)]" },
-  { value: 1, suffix: "", label: "Internship Completed", color: "text-[var(--accent-blue)]" },
-  { value: 85, suffix: "%+", label: "AI Model Accuracy", color: "text-[var(--accent-teal)]" },
-  { value: 2026, suffix: "", label: "Graduate", color: "text-[var(--accent-cyan)]" },
+  { value: 3, suffix: "+", label: "Projects Delivered", color: "text-[var(--accent-orange)]" },
+  { value: 1, suffix: "", label: "Internship Completed", color: "text-[var(--accent-amber)]" },
+  { value: 85, suffix: "%+", label: "AI Model Accuracy", color: "text-[var(--accent-amber-dark)]" },
+  { value: 2026, suffix: "", label: "Graduate", color: "text-[var(--accent-orange)]" },
 ];
 
 function AnimatedCounter({ value, suffix, label, color }: { value: number; suffix: string; label: string; color: string }) {
@@ -41,7 +41,7 @@ function AnimatedCounter({ value, suffix, label, color }: { value: number; suffi
   }, [value]);
 
   return (
-    <div ref={ref} className="text-center p-10 flex flex-col gap-3 glass rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:-translate-y-1">
+    <div ref={ref} className="text-center p-10 flex flex-col gap-3 glass rounded-xl transition-all duration-300 hover:border-[var(--accent-orange)] hover:-translate-y-1">
       <div className={`text-2xl md:text-3xl font-black tracking-tight ${color}`}>
         {count}{suffix}
       </div>
@@ -78,7 +78,7 @@ export default function About() {
             <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
               Computer Science (AI & ML) graduate who enjoys building products end-to-end — from Angular
               frontends to Node.js APIs and MySQL databases. Delivered a live client website during
-              internship and developed AI models achieving <strong className="text-[var(--accent-cyan)]">85%+ prediction accuracy</strong>.
+              internship and developed AI models achieving <strong className="text-[var(--accent-orange)]">85%+ prediction accuracy</strong>.
             </p>
             <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
               Experienced in the full Software Development Life Cycle, RESTful API development, and
@@ -86,8 +86,8 @@ export default function About() {
               <strong className="text-[var(--text-primary)]">Excel</strong> for data analysis when needed.
             </p>
             <p className="text-sm md:text-[0.95rem] text-[var(--text-secondary)] leading-[1.9]">
-              Looking for a <strong className="text-[var(--accent-cyan)]">Fresher Software Developer</strong> or{" "}
-              <strong className="text-[var(--accent-cyan)]">Full Stack Developer</strong> role where I can contribute
+              Looking for a <strong className="text-[var(--accent-orange)]">Fresher Software Developer</strong> or{" "}
+              <strong className="text-[var(--accent-orange)]">Full Stack Developer</strong> role where I can contribute
               meaningfully from day one.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function About() {
               </div>
               <div className="border-b border-[var(--border-color)] pb-4">
                 <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Email</div>
-                <div className="text-sm font-medium text-[var(--accent-cyan)] break-all">bandarisanjaykumar8@gmail.com</div>
+                <div className="text-sm font-medium text-[var(--accent-orange)] break-all">bandarisanjaykumar8@gmail.com</div>
               </div>
               <div>
                 <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Phone</div>
@@ -133,7 +133,7 @@ export default function About() {
           </h3>
           <div className="flex flex-wrap justify-center gap-2.5">
             {["Problem Solving", "Communication", "Team Collaboration", "Adaptability", "Time Management", "Continuous Learning"].map((skill) => (
-              <span key={skill} className="px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] transition-all duration-200">
+              <span key={skill} className="px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-orange)] hover:text-[var(--accent-orange)] transition-all duration-200">
                 {skill}
               </span>
             ))}

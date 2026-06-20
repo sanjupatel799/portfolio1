@@ -65,7 +65,7 @@ function SkillBar({ name, level, index }: { name: string; level: number; index: 
       </div>
       <div className="w-full h-1.5 bg-[rgba(255,255,255,0.05)] rounded-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)]"
+          className="h-full rounded-full bg-gradient-to-r from-[var(--accent-orange)] to-[var(--accent-amber)]"
           style={{ width: `${level}%`, animation: `progressFill 1s ease ${index * 0.08 + 0.4}s forwards` }}
         />
       </div>
@@ -76,7 +76,7 @@ function SkillBar({ name, level, index }: { name: string; level: number; index: 
 export default function Skills() {
   return (
     <section id="skills" className="relative py-44 md:py-52 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--accent-cyan)] opacity-[0.015] blur-[140px] rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--accent-orange)] opacity-[0.015] blur-[140px] rounded-full" />
 
       <div className="section-container">
         <div className="mt-4">
@@ -90,10 +90,10 @@ export default function Skills() {
           {skillCategories.map((cat, i) => (
             <div
               key={cat.title}
-              className="glass rounded-xl px-12 py-8 flex flex-col gap-5 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+              className="glass rounded-xl px-12 py-8 flex flex-col gap-5 transition-all duration-300 hover:border-[var(--accent-orange)] hover:glow-orange hover:-translate-y-1"
               style={{ animation: `fadeInUp 0.5s ease ${i * 0.08}s forwards`, opacity: 0 }}
             >
-              <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--accent-cyan)] font-medium pb-3 border-b border-[var(--border-color)] text-center">
+              <h3 className="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-[var(--accent-orange)] font-medium pb-3 border-b border-[var(--border-color)] text-center">
                 // {cat.title}
               </h3>
               {cat.skills.map((skill, j) => (
@@ -110,7 +110,7 @@ export default function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {techTags.map((tag) => (
-              <span key={tag} className="hover-tag-pop px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] hover:glow-cyan transition-all duration-200">
+              <span key={tag} className="hover-tag-pop px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-orange)] hover:text-[var(--accent-orange)] hover:glow-orange transition-all duration-200">
                 {tag}
               </span>
             ))}

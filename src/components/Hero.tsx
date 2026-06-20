@@ -51,15 +51,15 @@ export default function Hero() {
       <div className="absolute inset-0 grid-bg animate-grid-drift" />
 
       {/* Glow orbs */}
-      <div className="absolute -top-48 -right-48 w-[600px] h-[600px] rounded-full bg-[var(--accent-cyan)] opacity-[0.04] blur-[140px] animate-pulse-glow" />
-      <div className="absolute -bottom-48 -left-48 w-[500px] h-[500px] rounded-full bg-[var(--accent-blue)] opacity-[0.03] blur-[140px] animate-pulse-glow" style={{ animationDelay: "2.5s" }} />
+      <div className="absolute -top-48 -right-48 w-[600px] h-[600px] rounded-full bg-[var(--accent-orange)] opacity-[0.04] blur-[140px] animate-pulse-glow" />
+      <div className="absolute -bottom-48 -left-48 w-[500px] h-[500px] rounded-full bg-[var(--accent-amber)] opacity-[0.03] blur-[140px] animate-pulse-glow" style={{ animationDelay: "2.5s" }} />
 
       {/* Floating tech icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block">
         {FLOATING_ICONS.map((icon) => (
           <div
             key={icon.label}
-            className="absolute glass rounded-lg px-3 py-1.5 text-xs font-mono text-[var(--accent-cyan)]"
+            className="absolute glass rounded-lg px-3 py-1.5 text-xs font-mono text-[var(--accent-orange)]"
             style={{
               top: icon.top,
               left: icon.left,
@@ -77,8 +77,8 @@ export default function Hero() {
         <div className="max-w-3xl">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-6" style={{ opacity: 0, animation: "fadeInUp 0.6s ease forwards" }}>
-            <span className="w-2 h-2 rounded-full bg-[var(--accent-cyan)] animate-pulse" />
-            <span className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--accent-cyan)]">
+            <span className="w-2 h-2 rounded-full bg-[var(--accent-orange)] animate-pulse" />
+            <span className="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-[var(--accent-orange)]">
               Available for opportunities
             </span>
           </div>
@@ -94,7 +94,7 @@ export default function Hero() {
           {/* Typing animation */}
           <div className="flex items-center gap-2 mb-4 h-8">
             <span className="font-mono text-sm text-[var(--text-muted)]">Bandari Sanjay Kumar —</span>
-            <span className="font-mono text-sm text-[var(--accent-cyan)]">
+            <span className="font-mono text-sm text-[var(--accent-orange)]">
               {TYPING_WORDS[typingIndex].substring(0, charIndex)}
               <span className="animate-pulse">|</span>
             </span>
@@ -110,15 +110,15 @@ export default function Hero() {
           {/* CTA */}
           <div className="flex flex-wrap gap-3" style={{ opacity: 0, animation: "fadeInUp 0.6s ease 0.4s forwards" }}>
             <a href="#projects" onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white font-semibold text-sm rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-0.5 active:translate-y-0">
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-[var(--accent-orange)] to-[var(--accent-amber)] text-white font-semibold text-sm rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:-translate-y-0.5 active:translate-y-0">
               View Projects <ArrowDown size={16} />
             </a>
             <a href="/resume.pdf" download
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 glass text-[var(--text-primary)] font-medium text-sm rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] hover:-translate-y-0.5 active:translate-y-0">
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 glass text-[var(--text-primary)] font-medium text-sm rounded-xl transition-all duration-300 hover:border-[var(--accent-orange)] hover:text-[var(--accent-orange)] hover:-translate-y-0.5 active:translate-y-0">
               <Download size={16} /> Resume
             </a>
             <a href="#contact" onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 glass text-[var(--text-primary)] font-medium text-sm rounded-xl transition-all duration-300 hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] hover:-translate-y-0.5 active:translate-y-0">
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 glass text-[var(--text-primary)] font-medium text-sm rounded-xl transition-all duration-300 hover:border-[var(--accent-orange)] hover:text-[var(--accent-orange)] hover:-translate-y-0.5 active:translate-y-0">
               Contact Me <ExternalLink size={16} />
             </a>
           </div>
@@ -126,11 +126,11 @@ export default function Hero() {
           {/* Social */}
           <div className="flex gap-5 mt-10" style={{ opacity: 0, animation: "fadeInUp 0.6s ease 0.6s forwards" }}>
             <a href="https://github.com/sanjupatel799" target="_blank" rel="noopener noreferrer"
-              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
+              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-orange)] transition-colors duration-300">
               <GithubIcon size={20} />
             </a>
             <a href="https://linkedin.com/in/sanjaykumarbandari799" target="_blank" rel="noopener noreferrer"
-              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
+              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-orange)] transition-colors duration-300">
               <LinkedinIcon size={20} />
             </a>
           </div>
@@ -139,7 +139,7 @@ export default function Hero() {
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--text-muted)]" style={{ opacity: 0, animation: "fadeInUp 0.6s ease 0.8s forwards" }}>
         <span className="font-mono text-[0.5rem] tracking-[0.25em] uppercase">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-[var(--accent-cyan)] to-transparent animate-pulse" />
+        <div className="w-px h-10 bg-gradient-to-b from-[var(--accent-orange)] to-transparent animate-pulse" />
       </div>
     </section>
   );
