@@ -30,9 +30,9 @@ export default function Contact() {
                 <h3 className="text-sm font-bold">Contact Information</h3>
 
                 <a href="mailto:bandarisanjaykumar8@gmail.com"
-                  className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-olive)] group">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(124,138,58,0.1)] flex items-center justify-center flex-shrink-0">
-                    <Mail size={16} className="text-[var(--accent-olive)]" />
+                  className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-purple)] group">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center flex-shrink-0">
+                    <Mail size={16} className="text-[var(--accent-purple)]" />
                   </div>
                   <div className="text-left flex-1 min-w-0">
                     <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Email</div>
@@ -41,8 +41,8 @@ export default function Contact() {
                 </a>
 
                 <div className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(124,138,58,0.1)] flex items-center justify-center flex-shrink-0">
-                    <Phone size={16} className="text-[var(--accent-olive)]" />
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center flex-shrink-0">
+                    <Phone size={16} className="text-[var(--accent-purple)]" />
                   </div>
                   <div>
                     <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Phone</div>
@@ -51,8 +51,8 @@ export default function Contact() {
                 </div>
 
                 <div className="w-full flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)]">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(124,138,58,0.1)] flex items-center justify-center flex-shrink-0">
-                    <MapPin size={16} className="text-[var(--accent-olive)]" />
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center flex-shrink-0">
+                    <MapPin size={16} className="text-[var(--accent-purple)]" />
                   </div>
                   <div>
                     <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Location</div>
@@ -63,15 +63,15 @@ export default function Contact() {
                 {/* Action Buttons */}
                 <div className="w-full flex flex-wrap justify-center gap-3">
                   <a href="mailto:bandarisanjaykumar8@gmail.com"
-                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[var(--accent-olive)] to-[var(--accent-lime)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(124,138,58,0.3)]">
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-lavender)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
                     <Send size={14} className="icon-arrow" /> Email Me
                   </a>
                   <a href="https://wa.me/917993701618" target="_blank" rel="noopener noreferrer"
-                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-olive)] hover:text-[var(--accent-olive)]">
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-purple)] hover:text-[var(--accent-purple)]">
                     <MessageCircle size={14} className="icon-arrow" /> WhatsApp
                   </a>
                   <a href="/resume.pdf" download
-                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-olive)] hover:text-[var(--accent-olive)]">
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-purple)] hover:text-[var(--accent-purple)]">
                     <Download size={14} className="icon-arrow" /> Resume
                   </a>
                 </div>
@@ -83,31 +83,31 @@ export default function Contact() {
 
                 <div className="w-full flex flex-col gap-4">
                   <a href="https://github.com/sanjupatel799" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-olive)] group">
-                    <div className="w-10 h-10 rounded-lg bg-[rgba(124,138,58,0.1)] flex items-center justify-center flex-shrink-0">
-                      <GithubIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-olive)] transition-colors" />
+                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-purple)] group">
+                    <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center flex-shrink-0">
+                      <GithubIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-purple)] transition-colors" />
                     </div>
                     <div className="text-left flex-1 min-w-0">
                       <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">GitHub</div>
-                      <div className="text-xs font-medium group-hover:text-[var(--accent-olive)] transition-colors">sanjupatel799</div>
+                      <div className="text-xs font-medium group-hover:text-[var(--accent-purple)] transition-colors">sanjupatel799</div>
                     </div>
                   </a>
                   <a href="https://linkedin.com/in/sanjaykumarbandari799" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-lime)] group">
-                    <div className="w-10 h-10 rounded-lg bg-[rgba(124,138,58,0.1)] flex items-center justify-center flex-shrink-0">
-                      <LinkedinIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-lime)] transition-colors" />
+                    className="flex items-center gap-3 p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[var(--border-color)] transition-all duration-300 hover:border-[var(--accent-lavender)] group">
+                    <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center flex-shrink-0">
+                      <LinkedinIcon size={18} className="text-[var(--text-muted)] group-hover:text-[var(--accent-lavender)] transition-colors" />
                     </div>
                     <div className="text-left flex-1 min-w-0">
                       <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">LinkedIn</div>
-                      <div className="text-xs font-medium group-hover:text-[var(--accent-lime)] transition-colors">sanjaykumarbandari799</div>
+                      <div className="text-xs font-medium group-hover:text-[var(--accent-lavender)] transition-colors">sanjaykumarbandari799</div>
                     </div>
                   </a>
                 </div>
 
                 {/* Decorative gradient */}
-                <div className="w-full p-5 rounded-xl bg-gradient-to-br from-[rgba(124,138,58,0.05)] to-[rgba(163,184,108,0.05)] border border-[rgba(124,138,58,0.08)] text-center">
+                <div className="w-full p-5 rounded-xl bg-gradient-to-br from-[rgba(139,92,246,0.05)] to-[rgba(167,139,250,0.05)] border border-[rgba(139,92,246,0.08)] text-center">
                   <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                    <strong className="text-[var(--accent-olive)]">BANDARI SANJAY KUMAR</strong>
+                    <strong className="text-[var(--accent-purple)]">BANDARI SANJAY KUMAR</strong>
                     <br />
                     Full Stack Developer · Angular · Node.js · AI & ML
                   </p>

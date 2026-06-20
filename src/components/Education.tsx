@@ -27,7 +27,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="education" className="relative py-36 md:py-44 overflow-hidden">
       <div className="section-container">
         <div>
           <span className="section-label">Education</span>
@@ -43,7 +43,7 @@ export default function Education() {
               className="hover-card-glow glass rounded-xl p-12 flex flex-col gap-3 transition-all duration-300 hover:-translate-y-1 text-center"
               style={{ animation: `fadeInUp 0.5s ease ${i * 0.12}s forwards`, opacity: 0 }}
             >
-              <span className="font-mono text-[0.55rem] tracking-[0.1em] text-[var(--accent-olive)] font-medium">
+              <span className="font-mono text-[0.55rem] tracking-[0.1em] text-[var(--accent-purple)] font-medium">
                 {edu.year}
               </span>
               <h3 className="text-base font-bold leading-snug">
@@ -53,10 +53,10 @@ export default function Education() {
                 {edu.school}
               </p>
               <div className="flex items-center justify-center gap-3">
-                <span className={`font-mono text-xs ${edu.highlight ? "text-[var(--accent-olive)] font-bold" : "text-[var(--text-muted)]"}`}>
+                <span className={`font-mono text-xs ${edu.highlight ? "text-[var(--accent-purple)] font-bold" : "text-[var(--text-muted)]"}`}>
                   {edu.score}
                 </span>
-                <span className={`hover-tag-pop px-2.5 py-1 text-[0.5rem] font-mono rounded ${edu.highlight ? "bg-[rgba(124,138,58,0.1)] border border-[rgba(124,138,58,0.2)] text-[var(--accent-olive)]" : "bg-[rgba(255,255,255,0.03)] border border-[var(--border-color)] text-[var(--text-muted)]"}`}>
+                <span className={`hover-tag-pop px-2.5 py-1 text-[0.5rem] font-mono rounded ${edu.highlight ? "bg-[rgba(139,92,246,0.1)] border border-[rgba(139,92,246,0.2)] text-[var(--accent-purple)]" : "bg-[rgba(255,255,255,0.03)] border border-[var(--border-color)] text-[var(--text-muted)]"}`}>
                   {edu.tag}
                 </span>
               </div>

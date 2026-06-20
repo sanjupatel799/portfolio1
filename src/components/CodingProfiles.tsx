@@ -22,7 +22,7 @@ const profiles = [
 
 export default function CodingProfiles() {
   return (
-    <section id="coding-profiles" className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="coding-profiles" className="relative py-36 md:py-44 overflow-hidden">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-14">
@@ -50,19 +50,19 @@ export default function CodingProfiles() {
                     style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
                   >
                     <div className="flex flex-col items-center gap-4">
-                      <div className="card-icon-wrapper w-14 h-14 rounded-xl bg-[rgba(124,138,58,0.1)] flex items-center justify-center group-hover:bg-[rgba(124,138,58,0.15)] transition-colors">
+                      <div className="card-icon-wrapper w-14 h-14 rounded-xl bg-[rgba(139,92,246,0.1)] flex items-center justify-center group-hover:bg-[rgba(139,92,246,0.15)] transition-colors">
                         <Icon size={28} />
                       </div>
                       <div>
-                        <h3 className="text-base font-bold group-hover:text-[var(--accent-olive)] transition-colors">
+                        <h3 className="text-base font-bold group-hover:text-[var(--accent-purple)] transition-colors">
                           {profile.name}
                         </h3>
                         <p className="text-xs text-[var(--text-muted)] mt-1">{profile.username}</p>
                         <p className="text-[0.65rem] text-[var(--text-secondary)] mt-1.5">{profile.stats}</p>
                       </div>
-                      <div className="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[rgba(124,138,58,0.06)] border border-[rgba(124,138,58,0.1)] group-hover:border-[rgba(124,138,58,0.3)] transition-all">
-                        <span className="text-[0.55rem] font-mono text-[var(--accent-olive)] font-medium tracking-wide uppercase">Visit</span>
-                        <ExternalLink size={12} className="text-[var(--accent-olive)] icon-arrow" />
+                      <div className="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[rgba(139,92,246,0.06)] border border-[rgba(139,92,246,0.1)] group-hover:border-[rgba(139,92,246,0.3)] transition-all">
+                        <span className="text-[0.55rem] font-mono text-[var(--accent-purple)] font-medium tracking-wide uppercase">Visit</span>
+                        <ExternalLink size={12} className="text-[var(--accent-purple)] icon-arrow" />
                       </div>
                     </div>
                   </a>

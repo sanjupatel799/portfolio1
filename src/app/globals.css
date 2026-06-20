@@ -5,21 +5,21 @@
 
 /* ── Premium Theme Tokens ── */
 :root {
-  --bg-primary: #f5f2eb;
-  --bg-secondary: #edeadf;
-  --bg-card: rgba(218, 215, 190, 0.4);
-  --bg-card-hover: rgba(200, 197, 168, 0.5);
-  --border-color: rgba(124, 138, 58, 0.18);
-  --border-hover: rgba(124, 138, 58, 0.35);
-  --text-primary: #292524;
-  --text-secondary: #57534e;
-  --text-muted: #a8a29e;
-  --accent-olive: #7c8a3a;
-  --accent-lime: #a3b86c;
-  --accent-forest: #3d5a2e;
-  --accent-olive-dark: #5c6b2e;
-  --gradient-1: linear-gradient(135deg, #a3b86c, #7c8a3a);
-  --gradient-2: linear-gradient(135deg, #7c8a3a, #3d5a2e);
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-card: rgba(20, 20, 30, 0.4);
+  --bg-card-hover: rgba(30, 30, 40, 0.5);
+  --border-color: rgba(139, 92, 246, 0.15);
+  --border-hover: rgba(139, 92, 246, 0.35);
+  --text-primary: #f0f4f8;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-purple: #8b5cf6;
+  --accent-lavender: #a78bfa;
+  --accent-indigo: #4f46e5;
+  --accent-purple-dark: #6d28d9;
+  --gradient-1: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  --gradient-2: linear-gradient(135deg, #8b5cf6, #4f46e5);
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -32,10 +32,10 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --color-accent-olive: var(--accent-olive);
-  --color-accent-lime: var(--accent-lime);
-  --color-accent-forest: var(--accent-forest);
-  --color-accent-olive-dark: var(--accent-olive-dark);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-lavender: var(--accent-lavender);
+  --color-accent-indigo: var(--accent-indigo);
+  --color-accent-purple-dark: var(--accent-purple-dark);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
@@ -59,11 +59,11 @@ body {
   }
 }
 
-::selection { background: rgba(124, 138, 58, 0.3); color: #fff; }
+::selection { background: rgba(139, 92, 246, 0.3); color: #fff; }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--accent-olive); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--accent-purple); border-radius: 4px; }
 
 html.lenis { height: auto; }
 .lenis-scroll-smooth { scroll-behavior: auto; }
@@ -110,10 +110,10 @@ html.lenis { height: auto; }
 }
 .hover-card-glow:hover {
   box-shadow:
-    0 0 25px rgba(124, 138, 58, 0.15),
-    0 0 60px rgba(124, 138, 58, 0.05),
-    inset 0 0 30px rgba(124, 138, 58, 0.02);
-  border-color: rgba(124, 138, 58, 0.3);
+    0 0 25px rgba(139, 92, 246, 0.15),
+    0 0 60px rgba(139, 92, 246, 0.05),
+    inset 0 0 30px rgba(139, 92, 246, 0.02);
+  border-color: rgba(139, 92, 246, 0.3);
 }
 
 .card-icon-wrapper {
@@ -128,7 +128,7 @@ html.lenis { height: auto; }
 }
 .group:hover .metric-badge {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 138, 58, 0.15);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
 }
 
 .social-link-icon {
@@ -180,7 +180,7 @@ html.lenis { height: auto; }
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-olive);
+  color: var(--accent-purple);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -191,7 +191,7 @@ html.lenis { height: auto; }
   content: '';
   width: 2rem;
   height: 1px;
-  background: var(--accent-olive);
+  background: var(--accent-purple);
   opacity: 0.35;
 }
 
@@ -206,19 +206,19 @@ html.lenis { height: auto; }
 }
 
 /* ── Glow effects ── */
-.glow-olive {
-  box-shadow: 0 0 20px rgba(124, 138, 58, 0.15), 0 0 40px rgba(124, 138, 58, 0.05);
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15), 0 0 40px rgba(139, 92, 246, 0.05);
 }
 
-.glow-lime {
-  box-shadow: 0 0 20px rgba(163, 184, 108, 0.15), 0 0 40px rgba(163, 184, 108, 0.05);
+.glow-lavender {
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.15), 0 0 40px rgba(167, 139, 250, 0.05);
 }
 
 /* ── Grid background pattern ── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(124,138,58,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,138,58,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(139,92,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,92,246,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -228,7 +228,7 @@ html.lenis { height: auto; }
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(124,138,58,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);

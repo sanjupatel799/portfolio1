@@ -9,7 +9,7 @@ const projects = [
     description:
       "Trained on 10,000+ accident records. Achieved 85%+ validation accuracy. Recommended nearest hospitals based on accident severity.",
     tags: ["Python", "Deep Learning", "Machine Learning"],
-    accent: "from-[var(--accent-olive)] to-[var(--accent-lime)]",
+    accent: "from-[var(--accent-purple)] to-[var(--accent-lavender)]",
     metrics: ["10K+ Records", "85%+ Accuracy", "Real-time Rec."],
     demo: "#",
     github: "#",
@@ -20,7 +20,7 @@ const projects = [
     description:
       "Live production website built with Angular and TypeScript. Component-based architecture with responsive design across all devices.",
     tags: ["Angular", "TypeScript", "Bootstrap", "Node.js"],
-    accent: "from-[var(--accent-lime)] to-[var(--accent-olive-dark)]",
+    accent: "from-[var(--accent-lavender)] to-[var(--accent-purple-dark)]",
     metrics: ["6+ Pages", "Live Production", "Responsive"],
     demo: "https://s2swebsolutions.in/msv",
     github: "#",
@@ -31,7 +31,7 @@ const projects = [
     description:
       "Analyzed 200+ student responses to identify AI literacy gaps. Presented research at institutional level.",
     tags: ["Python", "Statistical Analysis"],
-    accent: "from-[var(--accent-olive-dark)] to-[var(--accent-olive)]",
+    accent: "from-[var(--accent-purple-dark)] to-[var(--accent-purple)]",
     metrics: ["200+ Students", "Institutional Pres.", "Data-Driven"],
     demo: "#",
     github: "#",
@@ -53,18 +53,18 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.name}
-              className="group relative glass rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(124,138,58,0.1)]"
+              className="group relative glass rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(139,92,246,0.1)]"
               style={{ animation: `fadeInUp 0.6s ease ${i * 0.1}s forwards`, opacity: 0 }}
             >
               {/* Gradient top bar */}
               <div className={`h-1 bg-gradient-to-r ${project.accent}`} />
 
               <div className="p-12 flex flex-col gap-4 text-center">
-                <span className="font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-olive)] font-medium block">
+                <span className="font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-purple)] font-medium block">
                   {project.type}
                 </span>
 
-                <h3 className="text-base font-bold leading-snug group-hover:text-[var(--accent-olive)] transition-colors">
+                <h3 className="text-base font-bold leading-snug group-hover:text-[var(--accent-purple)] transition-colors">
                   {project.name}
                 </h3>
 
@@ -75,7 +75,7 @@ export default function Projects() {
                 {/* Metrics */}
                 <div className="flex flex-wrap justify-center gap-2">
                   {project.metrics.map((m) => (
-                    <span key={m} className="metric-badge px-2 py-1 bg-[rgba(124,138,58,0.06)] border border-[rgba(124,138,58,0.1)] text-[0.55rem] font-mono text-[var(--accent-olive)] rounded">
+                    <span key={m} className="metric-badge px-2 py-1 bg-[rgba(139,92,246,0.06)] border border-[rgba(139,92,246,0.1)] text-[0.55rem] font-mono text-[var(--accent-purple)] rounded">
                       {m}
                     </span>
                   ))}
@@ -94,19 +94,19 @@ export default function Projects() {
                 <div className="flex flex-wrap justify-center gap-3">
                   {project.demo !== "#" && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer"
-                      className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[var(--accent-olive)] to-[var(--accent-lime)] text-white text-[0.6rem] font-medium rounded-lg transition-all hover:shadow-[0_0_15px_rgba(124,138,58,0.3)]">
+                      className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-lavender)] text-white text-[0.6rem] font-medium rounded-lg transition-all hover:shadow-[0_0_15px_rgba(139,92,246,0.3)]">
                       <ExternalLink size={12} className="icon-arrow" /> Live Demo
                     </a>
                   )}
                   <a href={project.github || "#"} target="_blank" rel="noopener noreferrer"
-                    className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 glass text-[var(--text-muted)] text-[0.6rem] font-medium rounded-lg transition-all hover:text-[var(--accent-olive)] hover:border-[var(--accent-olive)]">
+                    className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 glass text-[var(--text-muted)] text-[0.6rem] font-medium rounded-lg transition-all hover:text-[var(--accent-purple)] hover:border-[var(--accent-purple)]">
                     <GitBranch size={12} className="icon-arrow" /> GitHub
                   </a>
                 </div>
               </div>
 
               {/* Hover glow */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-t from-[rgba(124,138,58,0.03)] to-transparent" />
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-t from-[rgba(139,92,246,0.03)] to-transparent" />
             </div>
           ))}
         </div>

@@ -4,7 +4,7 @@ const tags = ["Angular", "Node.js", "Express.js", "MySQL", "REST APIs", "Git"];
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-36 md:py-44 bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="experience" className="relative py-36 md:py-44 overflow-hidden">
       <div className="section-container">
         <div className="flex flex-col items-center">
           {/* Header */}
@@ -26,7 +26,7 @@ export default function Experience() {
               {/* Header */}
               <div className="flex flex-col items-center gap-2">
                 <h3 className="text-lg font-bold">Full Stack Developer Intern</h3>
-                <span className="inline-block font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-olive)] font-medium px-3 py-1 glass rounded-full">
+                <span className="inline-block font-mono text-[0.5rem] tracking-[0.15em] uppercase text-[var(--accent-purple)] font-medium px-3 py-1 glass rounded-full">
                   S2S Web Solutions
                 </span>
               </div>
@@ -42,7 +42,7 @@ export default function Experience() {
                   "Participated in deployment and production testing.",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent-olive)] opacity-50 flex-shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent-purple)] opacity-50 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
