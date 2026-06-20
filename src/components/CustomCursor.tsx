@@ -46,10 +46,10 @@ export default function CustomCursor() {
   return (
     <>
       <div ref={cursorRef}
-        className="fixed pointer-events-none z-[9999] w-3 h-3 rounded-full bg-[var(--accent-orange)] mix-blend-screen transition-transform duration-150 ease-out hidden md:block"
+        className="fixed pointer-events-none z-[9999] w-3 h-3 rounded-full bg-[var(--accent-olive)] mix-blend-screen transition-transform duration-150 ease-out hidden md:block"
         style={{ left: 0, top: 0 }} />
       <div ref={ringRef}
-        className="fixed pointer-events-none z-[9998] w-9 h-9 rounded-full border border-[var(--accent-orange)] opacity-40 hidden md:block"
+        className="fixed pointer-events-none z-[9998] w-9 h-9 rounded-full border border-[var(--accent-olive)] opacity-40 hidden md:block"
         style={{ left: 0, top: 0 }} />
       <div ref={glowRef}
         className="fixed pointer-events-none z-[9995] hidden md:block"
@@ -57,7 +57,7 @@ export default function CustomCursor() {
           left: 0, top: 0,
           width: "300px", height: "300px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(124,138,58,0.06) 0%, transparent 70%)",
           transform: "translate(-50%, -50%)",
         }} />
     </>
