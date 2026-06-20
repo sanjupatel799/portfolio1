@@ -26,7 +26,7 @@ export default function Contact() {
           <div className="w-full max-w-4xl">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Contact Info Card */}
-              <div className="glass rounded-2xl p-12 flex flex-col items-center gap-5">
+              <div className="hover-card-glow glass rounded-2xl p-12 flex flex-col items-center gap-5">
                 <h3 className="text-sm font-bold">Contact Information</h3>
 
                 <a href="mailto:bandarisanjaykumar8@gmail.com"
@@ -63,22 +63,22 @@ export default function Contact() {
                 {/* Action Buttons */}
                 <div className="w-full flex flex-wrap justify-center gap-3">
                   <a href="mailto:bandarisanjaykumar8@gmail.com"
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-                    <Send size={14} /> Email Me
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-xs font-medium rounded-lg transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                    <Send size={14} className="icon-arrow" /> Email Me
                   </a>
                   <a href="https://wa.me/917993701618" target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
-                    <MessageCircle size={14} /> WhatsApp
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
+                    <MessageCircle size={14} className="icon-arrow" /> WhatsApp
                   </a>
                   <a href="/resume.pdf" download
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
-                    <Download size={14} /> Resume
+                    className="hover-icon-slide inline-flex items-center gap-1.5 px-5 py-2.5 glass text-xs font-medium rounded-lg transition-all hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)]">
+                    <Download size={14} className="icon-arrow" /> Resume
                   </a>
                 </div>
               </div>
 
               {/* Social & Quick Links Card */}
-              <div className="glass rounded-2xl p-12 flex flex-col items-center gap-5">
+              <div className="hover-card-glow glass rounded-2xl p-12 flex flex-col items-center gap-5">
                 <h3 className="text-sm font-bold">Quick Links</h3>
 
                 <div className="w-full flex flex-col gap-4">

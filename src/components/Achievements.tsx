@@ -45,11 +45,10 @@ export default function Achievements() {
             const Icon = item.icon;
             return (
               <div
-                key={item.title}              className="glass rounded-xl p-12 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1"
+                key={item.title}              className="group hover-card-glow glass rounded-xl p-12 transition-all duration-300 hover:-translate-y-1"
               style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
             >
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
+                <div className="flex flex-col items-center text-center gap-4">                    <div className="card-icon-wrapper w-12 h-12 rounded-lg bg-[rgba(6,182,212,0.1)] flex items-center justify-center flex-shrink-0">
                     <Icon size={20} className={item.color} />
                   </div>
                   <div>

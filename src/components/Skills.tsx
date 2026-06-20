@@ -110,7 +110,7 @@ export default function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {techTags.map((tag) => (
-              <span key={tag} className="px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] hover:glow-cyan transition-all duration-200">
+              <span key={tag} className="hover-tag-pop px-3.5 py-1.5 glass text-xs font-mono text-[var(--text-secondary)] rounded-md hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] hover:glow-cyan transition-all duration-200">
                 {tag}
               </span>
             ))}

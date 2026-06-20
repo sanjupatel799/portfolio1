@@ -126,11 +126,11 @@ export default function Hero() {
           {/* Social */}
           <div className="flex gap-5 mt-10" style={{ opacity: 0, animation: "fadeInUp 0.6s ease 0.6s forwards" }}>
             <a href="https://github.com/sanjupatel799" target="_blank" rel="noopener noreferrer"
-              className="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
+              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
               <GithubIcon size={20} />
             </a>
             <a href="https://linkedin.com/in/sanjaykumarbandari799" target="_blank" rel="noopener noreferrer"
-              className="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
+              className="social-link-icon text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors duration-300">
               <LinkedinIcon size={20} />
             </a>
           </div>

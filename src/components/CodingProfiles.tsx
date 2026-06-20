@@ -46,11 +46,11 @@ export default function CodingProfiles() {
                     href={profile.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group glass rounded-xl p-10 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-1 text-center"
+                    className="group hover-card-glow glass rounded-xl p-10 transition-all duration-300 hover:-translate-y-1 text-center"
                     style={{ animation: `fadeInUp 0.5s ease ${i * 0.1}s forwards`, opacity: 0 }}
                   >
                     <div className="flex flex-col items-center gap-4">
-                      <div className="w-14 h-14 rounded-xl bg-[rgba(6,182,212,0.1)] flex items-center justify-center group-hover:bg-[rgba(6,182,212,0.15)] transition-colors">
+                      <div className="card-icon-wrapper w-14 h-14 rounded-xl bg-[rgba(6,182,212,0.1)] flex items-center justify-center group-hover:bg-[rgba(6,182,212,0.15)] transition-colors">
                         <Icon size={28} />
                       </div>
                       <div>
@@ -62,7 +62,7 @@ export default function CodingProfiles() {
                       </div>
                       <div className="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[rgba(6,182,212,0.06)] border border-[rgba(6,182,212,0.1)] group-hover:border-[rgba(6,182,212,0.3)] transition-all">
                         <span className="text-[0.55rem] font-mono text-[var(--accent-cyan)] font-medium tracking-wide uppercase">Visit</span>
-                        <ExternalLink size={12} className="text-[var(--accent-cyan)]" />
+                        <ExternalLink size={12} className="text-[var(--accent-cyan)] icon-arrow" />
                       </div>
                     </div>
                   </a>

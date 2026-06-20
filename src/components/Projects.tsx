@@ -75,7 +75,7 @@ export default function Projects() {
                 {/* Metrics */}
                 <div className="flex flex-wrap justify-center gap-2">
                   {project.metrics.map((m) => (
-                    <span key={m} className="px-2 py-1 bg-[rgba(6,182,212,0.06)] border border-[rgba(6,182,212,0.1)] text-[0.55rem] font-mono text-[var(--accent-cyan)] rounded">
+                    <span key={m} className="metric-badge px-2 py-1 bg-[rgba(6,182,212,0.06)] border border-[rgba(6,182,212,0.1)] text-[0.55rem] font-mono text-[var(--accent-cyan)] rounded">
                       {m}
                     </span>
                   ))}
@@ -94,13 +94,13 @@ export default function Projects() {
                 <div className="flex flex-wrap justify-center gap-3">
                   {project.demo !== "#" && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-[0.6rem] font-medium rounded-lg transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-                      <ExternalLink size={12} /> Live Demo
+                      className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-blue)] text-white text-[0.6rem] font-medium rounded-lg transition-all hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                      <ExternalLink size={12} className="icon-arrow" /> Live Demo
                     </a>
                   )}
                   <a href={project.github || "#"} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-3 py-1.5 glass text-[var(--text-muted)] text-[0.6rem] font-medium rounded-lg transition-all hover:text-[var(--accent-cyan)] hover:border-[var(--accent-cyan)]">
-                    <GitBranch size={12} /> GitHub
+                    className="hover-icon-slide flex items-center gap-1.5 px-3 py-1.5 glass text-[var(--text-muted)] text-[0.6rem] font-medium rounded-lg transition-all hover:text-[var(--accent-cyan)] hover:border-[var(--accent-cyan)]">
+                    <GitBranch size={12} className="icon-arrow" /> GitHub
                   </a>
                 </div>
               </div>

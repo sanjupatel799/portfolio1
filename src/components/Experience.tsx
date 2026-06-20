@@ -20,7 +20,7 @@ export default function Experience() {
           {/* Centered card */}
           <div className="w-full max-w-2xl">
             <div
-              className="glass rounded-xl p-12 flex flex-col items-center gap-6 transition-all duration-300 hover:border-[var(--accent-cyan)] hover:glow-cyan hover:-translate-y-0.5 text-center"
+              className="hover-card-glow glass rounded-xl p-12 flex flex-col items-center gap-6 transition-all duration-300 hover:-translate-y-0.5 text-center"
               style={{ animation: "fadeInUp 0.6s ease forwards" }}
             >
               {/* Header */}

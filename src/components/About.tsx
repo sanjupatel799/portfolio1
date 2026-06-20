@@ -94,7 +94,7 @@ export default function About() {
 
           {/* Info card */}
           <div className="reveal-right">
-            <div className="glass rounded-xl p-12 flex flex-col gap-4 text-center">
+            <div className="hover-card-glow glass rounded-xl p-12 flex flex-col gap-4 text-center">
               <div className="border-b border-[var(--border-color)] pb-4">
                 <div className="text-[0.5rem] text-[var(--text-muted)] font-mono tracking-wide uppercase">Name</div>
                 <div className="text-sm font-medium text-[var(--text-primary)]">Bandari Sanjay Kumar</div>

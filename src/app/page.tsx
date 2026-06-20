@@ -41,7 +41,9 @@ export default function Home() {
       <Achievements />
       <div className="h-12 md:h-20" />
       <Education />
+      <div className="h-12 md:h-20" />
       <Certifications />
+      <div className="h-12 md:h-20" />
       <CodingProfiles />
       <div className="h-12 md:h-20" />
       <Contact />
